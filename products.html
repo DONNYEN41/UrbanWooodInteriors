@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | UrbanWoodInteriors</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-forest: #183D32;
+      --color-cream: #F7F3EB;
+      --color-walnut: #8A5A3B;
+      --color-sage: #DCE6DC;
+    }
+  </style>
+</head>
+<body class="bg-cream text-stone-800">
+
+<header class="bg-white shadow-sm">
+  <nav class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-5">
+    <a href="index.html" class="text-xl font-bold text-forest">UrbanWoodInteriors</a>
+    <div class="flex flex-wrap gap-4 text-sm font-medium">
+      <a href="index.html" class="hover:text-walnut">Home</a>
+      <a href="about.html" class="hover:text-walnut">About</a>
+      <a href="products.html" class="font-bold text-forest">Products</a>
+      <a href="categories.html" class="hover:text-walnut">Categories</a>
+      <a href="gallery.html" class="hover:text-walnut">Gallery</a>
+      <a href="contact.html" class="hover:text-walnut">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="bg-sage px-6 py-16">
+    <div class="mx-auto max-w-7xl">
+      <p class="font-bold uppercase tracking-widest text-walnut">Our collection</p>
+      <h1 class="mt-3 text-4xl font-bold md:text-5xl">Find furniture for your space.</h1>
+      <p class="mt-4 max-w-2xl leading-7 text-stone-700">
+        Browse our sample collection of furniture for living rooms,
+        dining areas, bedrooms, and storage.
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-6 py-14">
+    <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+      <div class="flex flex-wrap gap-2">
+        <button data-filter="all" class="filter-btn rounded-full bg-forest px-4 py-2 text-sm font-semibold text-white">All</button>
+        <button data-filter="living" class="filter-btn rounded-full border px-4 py-2 text-sm hover:bg-sage">Living Room</button>
+        <button data-filter="dining" class="filter-btn rounded-full border px-4 py-2 text-sm hover:bg-sage">Dining</button>
+        <button data-filter="bedroom" class="filter-btn rounded-full border px-4 py-2 text-sm hover:bg-sage">Bedroom</button>
+        <button data-filter="storage" class="filter-btn rounded-full border px-4 py-2 text-sm hover:bg-sage">Storage</button>
+      </div>
+
+      <input id="product-search" type="search" placeholder="Search furniture..."
+        class="rounded-full border border-stone-300 bg-white px-5 py-3 outline-none focus:border-forest">
+    </div>
+
+    <p id="product-count" class="mt-5 text-sm text-stone-500">Showing 6 products</p>
+
+    <div id="product-grid" class="mt-6 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+
+      <article data-product-card data-category="living" class="overflow-hidden rounded-2xl bg-white shadow-sm">
+        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80"
+          alt="Modern sofa" class="h-60 w-full object-cover">
+        <div class="p-5">
+          <p class="text-sm text-walnut">Living Room</p>
+          <h2 class="mt-2 text-xl font-bold">The Haven Sofa</h2>
+          <p class="mt-2 text-sm leading-6 text-stone-600">Relaxed seating with a timeless design.</p>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="font-bold text-forest">KSh 68,000</span>
+            <a href="contact.html" class="font-semibold text-forest hover:text-walnut">Enquire →</a>
+          </div>
+        </div>
+      </article>
+
+      <article data-product-card data-category="dining" class="overflow-hidden rounded-2xl bg-white shadow-sm">
+        <img src="https://images.unsplash.com/photo-1604578762246-41134e37f9cc?auto=format&fit=crop&w=900&q=80"
+          alt="Wooden dining set" class="h-60 w-full object-cover">
+        <div class="p-5">
+          <p class="text-sm text-walnut">Dining</p>
+          <h2 class="mt-2 text-xl font-bold">The Alder Dining Set</h2>
+          <p class="mt-2 text-sm leading-6 text-stone-600">A welcoming place for meals and gatherings.</p>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="font-bold text-forest">KSh 42,500</span>
+            <a href="contact.html" class="font-semibold text-forest hover:text-walnut">Enquire →</a>
+          </div>
+        </div>
+      </article>
+
+      <article data-product-card data-category="bedroom" class="overflow-hidden rounded-2xl bg-white shadow-sm">
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
+          alt="Bed in a modern bedroom" class="h-60 w-full object-cover">
+        <div class="p-5">
+          <p class="text-sm text-walnut">Bedroom</p>
+          <h2 class="mt-2 text-xl font-bold">The Sol Bed Frame</h2>
+          <p class="mt-2 text-sm leading-6 text-stone-600">Simple lines for a peaceful bedroom.</p>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="font-bold text-forest">KSh 54,000</span>
+            <a href="contact.html" class="font-semibold text-forest hover:text-walnut">Enquire →</a>
+          </div>
+        </div>
+      </article>
+
+      <article data-product-card data-category="living" class="overflow-hidden rounded-2xl bg-white shadow-sm">
+        <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=900&q=80"
+          alt="Contemporary lounge chair" class="h-60 w-full object-cover">
+        <div class="p-5">
+          <p class="text-sm text-walnut">Living Room</p>
+          <h2 class="mt-2 text-xl font-bold">The Rowan Chair</h2>
+          <p class="mt-2 text-sm leading-6 text-stone-600">An accent chair for reading and relaxing.</p>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="font-bold text-forest">KSh 28,500</span>
+            <a href="contact.html" class="font-semibold text-forest hover:text-walnut">Enquire →</a>
+          </div>
+        </div>
+      </article>
+
+      <article data-product-card data-category="storage" class="overflow-hidden rounded-2xl bg-white shadow-sm">
+        <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=900&q=80"
+          alt="Modern storage furniture" class="h-60 w-full object-cover">
+        <div class="p-5">
+          <p class="text-sm text-walnut">Storage</p>
+          <h2 class="mt-2 text-xl font-bold">The Cove Sideboard</h2>
+          <p class="mt-2 text-sm leading-6 text-stone-600">Practical storage with a warm finish.</p>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="font-bold text-forest">KSh 39,500</span>
+            <a href="contact.html" class="font-semibold text-forest hover:text-walnut">Enquire →</a>
+          </div>
+        </div>
+      </article>
+
+      <article data-product-card data-category="living" class="overflow-hidden rounded-2xl bg-white shadow-sm">
+        <img src="https://images.unsplash.com/photo-1499933374294-4584851497cc?auto=format&fit=crop&w=900&q=80"
+          alt="Wooden coffee table" class="h-60 w-full object-cover">
+        <div class="p-5">
+          <p class="text-sm text-walnut">Living Room</p>
+          <h2 class="mt-2 text-xl font-bold">The Cedar Coffee Table</h2>
+          <p class="mt-2 text-sm leading-6 text-stone-600">A simple centrepiece for your living room.</p>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="font-bold text-forest">KSh 18,500</span>
+            <a href="contact.html" class="font-semibold text-forest hover:text-walnut">Enquire →</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <p id="no-products" class="mt-10 hidden text-center text-stone-500">
+      No matching furniture found. Try another search.
+    </p>
+
+    <p class="mt-8 text-xs text-stone-500">
+      Prices are illustrative examples for this project. Replace them with confirmed business prices.
+    </p>
+  </section>
+</main>
+
+<footer class="bg-[#102B24] px-6 py-10 text-white">
+  <div class="mx-auto grid max-w-7xl gap-8 md:grid-cols-3">
+    <div>
+      <h2 class="text-xl font-bold">UrbanWoodInteriors</h2>
+      <p class="mt-3 max-w-sm text-sm leading-7 text-white/70">
+        Furniture designed for comfort, everyday living, and timeless style.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="font-bold">Quick Links</h3>
+      <div class="mt-3 flex flex-col gap-2 text-sm text-white/70">
+        <a href="about.html" class="hover:text-white">About Us</a>
+        <a href="products.html" class="hover:text-white">Products</a>
+        <a href="categories.html" class="hover:text-white">Categories</a>
+        <a href="gallery.html" class="hover:text-white">Gallery</a>
+        <a href="contact.html" class="hover:text-white">Contact</a>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-bold">Contact</h3>
+      <p class="mt-3 text-sm leading-7 text-white/70">Kenya</p>
+      <a href="tel:0745038983" class="text-sm text-white/70 hover:text-white">0745 038 983</a>
+      <a href="mailto:collieoroni99@gmail.com" class="block text-sm text-white/70 hover:text-white">
+        collieoroni99@gmail.com
+      </a>
+    </div>
+  </div>
+
+  <div class="mx-auto mt-8 max-w-7xl border-t border-white/20 pt-5 text-center text-sm text-white/60">
+    <p>&copy; 2026 Collie Oroni. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
